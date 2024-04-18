@@ -1,0 +1,86 @@
+ /* Your custom styles here */
+ .container {
+    margin-top: 200px; 
+    margin-left: 35%; 
+    
+    max-width: 600px;
+   
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    animation: moveDown 0.5s ease, fadeInUp 0.5s ease;  
+  }
+ 
+  .card {
+    background-color: #f9f9f9;
+    top: 18%;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    animation: moveDown 0.5s ease, fadeInUp 0.5s ease; 
+    margin-left: 41%; /* Ajouter cette ligne */
+  
+
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    width: 35%;
+    padding: 8px;
+    background-color: #119f43b9;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #8390A2;
+  }
+
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes moveDown {
+    from {
+      transform: translateY(-50px); /* Start position */
+      opacity: 0; /* Start opacity */
+    }
+    to {
+      transform: translateY(0); /* End position */
+      opacity: 1; /* End opacity */
+    }
+  }

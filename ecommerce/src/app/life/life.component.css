@@ -1,0 +1,127 @@
+.description {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(12, 12, 107);
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.elementor-widget-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.image-container,
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container img,
+.text-container img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 40px; /* Add more space between images */
+}
+
+.video-container {
+    flex: 1; /* Allow the video container to grow and take up the remaining space */
+    margin-left: 80px; /* Add some space between the images and the video */
+}
+
+@media (max-width: 768px) {
+    .elementor-widget-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .video-container {
+        margin-top: 20px;
+        margin-left: 0; /* Reset the left margin for the video container */
+    }
+}
+
+
+/* chose */
+
+.chose {
+    margin:100px 20px;
+    margin-top: 3%;
+    padding: 100px 0 0px 0;
+  }
+  
+  .chose .titlepage::before {
+    right: inherit;
+    left: 0px;
+  }
+  
+  .chose .titlepage h2 {
+    color: #dabfbf;
+  }
+  
+  .chose.chose .titlepage p {
+    color: #070707;
+    padding-top: 15px;
+  }
+  
+  .chose_box {
+   
+    margin-bottom: 30px;
+  }
+  
+  .chose_box {
+    padding-top: 20px;
+    color: #070707;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+  }
+  
+  .chose_box strong {
+    display: block;
+    color: #070707;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    padding-bottom: 30px;
+  }
+  
+  .chose_box .read_more {
+    background: #fff;
+    color: #323232;
+    max-width: 176px;
+    line-height: 47px;
+    height: 47px;
+  }
+  
+  .chose_box .read_more:hover {
+    background: #0e0b01;
+    color: #fff;
+  }
+  
+  
+  
+  
+  .img-container {
+    display: flex;
+    justify-content: space-between; /* Aligne les images sur la même ligne avec un espace entre elles */
+    margin-top: 3%; /* Ajustez la marge supérieure selon vos besoins */
+    overflow: hidden; /* Cache les images qui dépassent de la div */
+  }
+  
+  .img-container img {
+    width: 250px; /* Ajustez la largeur des images selon vos besoins */
+    transition: transform 1s ease-in-out; /* Animation de transition pour l'effet d'avancement */
+  }
+  
+  .img-container:hover img {
+    transform: translateX(50px); /* Déplace les images vers la droite au survol */
+  }
+  
+  
+  
+  
+  
+  
+  

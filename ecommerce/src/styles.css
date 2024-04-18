@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --main-color: #027581;
+    --main-dark: #1d2231;
+    --main-color: #8390a2;
+  }
+
+
+
+.btn-search {
+    color: black; /* Couleur initiale du texte */
+    border-color: black; /* Couleur initiale de la bordure */
+    transition: color 0.3s, border-color 0.3s; /* Transition de couleur pour le texte et la bordure */
+}
+
+.btn-search:hover {
+    background-color: #f8f9fa;
+    color: #007bff; /* Couleur finale du texte */
+    border-color: #007bff; /* Couleur finale de la bordure */
+}
+
+.btn-search:not(:hover) {
+    color: black; /* Couleur finale du texte quand non survolé */
+    border-color: black; /* Couleur finale de la bordure quand non survolé */
+}
+
+@keyframes changeColor {
+    0% {
+        color: black; /* Couleur initiale du texte */
+        border-color: black; /* Couleur initiale de la bordure */
+    }
+    100% {
+        color: blue; /* Couleur finale du texte */
+        border-color: blue; /* Couleur finale de la bordure */
+    }
+}
+
+
+
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

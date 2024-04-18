@@ -1,0 +1,124 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+ 
+  .container {
+    animation: fadeIn 0.5s ease;
+  }
+  .container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin-left: 7%;
+    
+    
+  }
+  
+  .card  {
+    background-color: #f9f9f9;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    margin-top: 50px;
+    margin-left: 8%; /* Ajouter cette ligne */
+
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #119f43b9;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color:  #8390A2;
+  }
+    
+  .edit-button {
+    background-color: blue;
+}
+
+.delete-button {
+    background-color: red;
+}
+.table {
+    margin-left: 120px; /* Adjust the value as needed */
+    margin-left: 10%;
+}
+
+
+.modal-header {
+    padding: 10px 15px; /* Réduire l'espace autour du titre */
+    align-items: center; margin-left: 2%;
+}
+
+/* Appliquer un style spécifique au bouton de fermeture */
+.btn-close {
+  font-size: 0.75rem; /* Définir une taille de police plus petite */
+  padding: 0.125rem 0.25rem; /* Réduire l'espacement à l'intérieur du bouton */
+  width: 2rem; /* Réduire la largeur du bouton */
+  height: 2rem; /* Réduire la hauteur du bouton */
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 25px;
+  border: 1px solid #454444;
+  text-align: left;
+}
+th{
+  color: #fffcfc;
+  background-color: #8390A2;
+}
+
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}

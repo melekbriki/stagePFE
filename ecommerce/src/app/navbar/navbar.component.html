@@ -1,0 +1,113 @@
+<nav *ngIf="showNavbar" class="navbar navbar-expand-lg" style="background-color: #24262b6b;">
+  <div class="container-fluid">
+    <img src="../../assets/trust.jpg" style="width: 40px; border-radius: 20px;" class="spacer">
+    <a class="navbar-brand" href="#">TechnoTrust</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/aboutus"  routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Partner
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/microsoft" >microsoft</a></li>
+                  <li><a class="dropdown-item" routerLink="/meritotech" >meritotech</a></li>
+              </ul>
+          </li>
+            <li><a class="dropdown-item" routerLink="/aboutus"  >Who we are</a></li>
+            <li><a class="dropdown-item" routerLink="/aboutus"   >Our History</a></li>
+           
+            <li><a class="dropdown-item"routerLink="/aboutus"  >Why choose us</a></li>
+            <li><a class="dropdown-item" routerLink="/events" >Event</a></li>
+  
+            
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/azure" routerLinkActive="active">Azure Cloud</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="isLoggedIn()">Computer Hardware</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/data" routerLinkActive="active">Data Center Co-Location</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+           
+            <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" routerLink="/digial" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Digital Transformation
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/itSecurity" >It Security</a></li>
+                    <li><a class="dropdown-item"  routerLink="/enduser" >End-User</a></li>
+                </ul>
+            </li>
+            <!-- Duplicate the "Digital Transformation" submenu -->
+            <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" routerLink="/automation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Automation
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/itsm">ITSM</a></li>
+                    <li><a class="dropdown-item" routerLink="/devops">DevOps</a></li>
+                </ul>
+            </li>
+            <!-- Duplicate the "Digital Transformation" submenu again -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" routerLink="/magedservices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Managed IT Services
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/data-center-services" >Data-Center-Services</a></li>
+                    <li><a class="dropdown-item" routerLink="/database-management">DataBase-Management</a></li>
+                    <li><a class="dropdown-item" routerLink="/network-management">Network-Management</a></li>
+                    <li><a class="dropdown-item" routerLink="/application-management">Application-Management</a></li>
+                    <li><a class="dropdown-item" routerLink="/remote-infrastructure-management">Remote-Infrastructure-Management</a></li>
+                  </ul>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/processoutsource">Process OutSource</a>
+          </li>
+         
+        </ul>
+        
+        
+        </li>
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact Us
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item"  routerLink="/career" >Career</a></li>
+            <li><a class="dropdown-item" routerLink="/life" >Life at TechnoTrust </a></li>
+         
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success custom-search-button btn-search" *ngIf="!isLoggedIn()" type="button" routerLink="/login">Login</button>
+        <button class="btn btn-outline-success custom-search-button btn-search" *ngIf="isLoggedIn()" (click)="logoutUser()" type="button"  routerLink="/home">Logout</button>
+        <button class="btn btn-outline-success custom-search-button btn-search" *ngIf="!isLoggedIn()" type="button" routerLink="/register">Signup</button>
+      </form>
+    </div>
+  </div>
+</nav>

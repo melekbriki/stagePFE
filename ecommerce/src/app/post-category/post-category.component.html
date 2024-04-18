@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<div class="card mt-5 container-wrappers" style="align-items: center;color: rgb(13, 69, 167);">
+    <h1>Add Category</h1>
+  </div>
+<div class="container">
+   
+    <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+        <label for="name">Name</label>
+        <br>
+        <input id="name" type="text" placeholder="Name" formControlName="name" />
+<br><br>
+        <label for="description">Description</label>
+        <br>
+        <input id="description" type="text" placeholder="Description" formControlName="description" />
+        <br><br>
+        
+        <button type="submit" >Add Category</button>
+    
+    </form>
+</div>
+<app-sidebar></app-sidebar>

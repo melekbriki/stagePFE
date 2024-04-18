@@ -1,0 +1,138 @@
+.container {
+    
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 35%;
+    background-color: #f9f9f9;
+    animation: moveDown 0.5s ease, fadeInUp 0.5s ease;  
+  }
+  .card-wrappers {
+ 
+    margin-bottom: 50px; /* Use a fixed pixel value */
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    top: 6%;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    animation: moveDown 0.5s ease, fadeInUp 0.5s ease; 
+    margin-left: 41%; /* Ajouter cette ligne */
+    margin-top: 200px; 
+
+  }
+  
+  
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #119f43b9;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #8390A2;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInUp {
+    animation: fadeInUp 0.5s ease;
+  }
+  @keyframes moveDown {
+    from {
+      transform: translateY(-50px); /* Start position */
+      opacity: 0; /* Start opacity */
+    }
+    to {
+      transform: translateY(0); /* End position */
+      opacity: 1; /* End opacity */
+    }
+  }
+
+  .container-wrapper {
+    margin-top: 100px; /* Adjust this value to move the form and sidebar down */
+  }
+
+
+
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+ 
+
+
+  .circle-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Taille du cercle */
+    height: 100px; /* Taille du cercle */
+    border-radius: 50%; /* Pour obtenir une forme de cercle */
+    border: 2px solid #ccc; /* Bordure grise autour du cercle */
+    overflow: hidden; /* Masquer le contenu qui dépasse du cercle */
+  }
+  
+  .preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  
+  
+ 
+  
+ 
