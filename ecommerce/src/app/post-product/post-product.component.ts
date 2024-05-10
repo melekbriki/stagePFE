@@ -13,7 +13,7 @@ import { FooterService } from '../services/footer.service';
   styleUrls: ['./post-product.component.css']
 })
 export class PostProductComponent implements OnInit {
-
+  products: any[] =[];
   productForm!: FormGroup;
   selectedFile!: File | null;
   imagePreview!: string | ArrayBuffer | null;
@@ -31,6 +31,7 @@ export class PostProductComponent implements OnInit {
   ngOnInit(): void {
     this.navbarService.hide();
     this.footerService.hide();
+    this.getAllProducts();
     this.productForm = this.fb.group({
       categoryId: [null, [Validators.required]],
       name: [null, [Validators.required]],
@@ -110,6 +111,37 @@ export class PostProductComponent implements OnInit {
     this.footerService.display();
   }
 
+  getAllProducts() {
+    this.products = [];
+    this.adminService.getAllProducts().subscribe(res => {
+      res.forEach((element: any) => { // Iterate over 'res' directly
+        element.processedImg = 'data:image/jpeg;base64,' + element.byteImg;
+        this.products.push(element);
+      });
+    });
+  }
+
+  deleteProduct(productID: any,) {
+    this.adminService.deletProduct(productID).subscribe(
+      (res) => {
+        // Delete product from local list
+        this.products = this.products.filter((product) => product.id !== productID);
+  
+        setTimeout(() => {
+          this.snackBar.open('Product Deleted successfully!', 'Close', {
+            duration: 5000
+          });
+        }, 500); // Delay of 500 milliseconds
+      },
+      (error) => {
+        console.error('Failed to delete product', error);
+        this.snackBar.open('Failed to delete product. Please try again.', 'error', {
+          duration: 5000
+        });
+      }
+    );
+  }
+  
 
   //cbcbcvbcvb
 }

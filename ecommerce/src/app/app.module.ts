@@ -5,9 +5,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -52,6 +52,8 @@ import { CommonModule } from '@angular/common';
 import { PostCategoryComponent } from './post-category/post-category.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostProductComponent } from './post-product/post-product.component';
+import { ComputerHardwareComponent } from './computer-hardware/computer-hardware.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,9 @@ import { PostProductComponent } from './post-product/post-product.component';
     ManageProductComponent,
     ForgotPasswordComponent,
     PostCategoryComponent,
-    PostProductComponent
+    PostProductComponent,
+    ComputerHardwareComponent,
+    CartComponent
   
   ],
   imports: [
@@ -106,7 +110,9 @@ import { PostProductComponent } from './post-product/post-product.component';
     MatFormFieldModule,
     MatSelectModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule,
+    MatDividerModule
     
     
     

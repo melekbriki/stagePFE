@@ -33,6 +33,8 @@ import { ManageUserComponent } from './manage-user/manage-user.component';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { PostCategoryComponent } from './post-category/post-category.component';
 import { PostProductComponent } from './post-product/post-product.component';
+import { ComputerHardwareComponent } from './computer-hardware/computer-hardware.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -73,11 +75,13 @@ const routes: Routes = [
     component: RegisterComponent
   },
   { path: 'welcome', component: WelcomeComponent },
+  { path: 'computer', component: ComputerHardwareComponent },
   { path: 'dashbord', component: DashbordComponent },
   { path: 'manage-user', component: ManageUserComponent },
   { path: 'manage-product', component: ManageProductComponent },
   { path: 'category', component: PostCategoryComponent },
   { path: 'product', component: PostProductComponent },
+  { path: 'cartC', component: CartComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' } 
 
   
